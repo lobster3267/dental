@@ -540,9 +540,9 @@ input[type='checkbox'] {
 	align-items: center;
 	justify-content: center;
 	padding: 1.25rem 2.5rem;
-	border: 1px solid rgba(237, 20, 20, 1);
+	border: 1px solid rgba(0, 155, 255, 1);
 	background-color: transparent;
-	color: #ed1414;
+	color: #009bff;
 	font-weight: 700;
 	font-size: 3rem;
 	line-height: 1;
