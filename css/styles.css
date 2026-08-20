@@ -136,7 +136,7 @@ a:hover {
 }
 
 .blue {
-	color: #ed1414;
+	color: #009bff;
 }
 
 .bg-gray {
@@ -493,7 +493,7 @@ input[type='checkbox'] {
 }
 
 .navbar .fa-stack-2x {
-	color: #ed1414;
+	color: #009bff;
 	transition: all 0.2s ease;
 }
 
@@ -751,7 +751,7 @@ input[type='checkbox'] {
 .basic-2 .fas,
 .basic-2 .far {
 	margin-bottom: 1.75rem;
-	color: #ed1414;
+	color: #009bff;
 	font-size: 3.5rem;
 }
 
