@@ -6,9 +6,9 @@
 	
 	 /* Populate the gallery from the grid folder in a new order on each load. */
     var gridImages = [];
-    for (var gridIndex = 1; gridIndex <= 59; gridIndex++) {
+    for (var gridIndex = 1; gridIndex <= 60; gridIndex++) {
         var paddedIndex = String(gridIndex).padStart(3, '0');
-        var imageType = gridIndex <= 27 ? '2x1' : (gridIndex <= 38 ? '1x2' : '1x1');
+        var imageType = gridIndex <= 27 ? '2x1' : (gridIndex <= 49 ? '1x2' : '1x1');
         gridImages.push({
             path: 'grid/' + paddedIndex + '_image_' + imageType + '.jpg',
             type: imageType
