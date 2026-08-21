@@ -4,7 +4,7 @@
 (function($) {
     "use strict"; 
 	
-	 /* Populate the gallery from the grid folder in a new order on each load. */
+    /* Populate the gallery from the grid folder in a new order on each load. */
     var gridImages = [];
     for (var gridIndex = 1; gridIndex <= 60; gridIndex++) {
         var paddedIndex = String(gridIndex).padStart(3, '0');
