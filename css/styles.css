@@ -559,12 +559,12 @@ input[type='checkbox'] {
 
 .grid-gallery-item.is-landscape {
 	grid-column: span 2;
-	grid-row: span 2;
+	grid-row: span 1;
 }
 
 .grid-gallery-item.is-portrait {
 	grid-column: span 1;
-	grid-row: span 4;
+	grid-row: span 2;
 }
 
 .grid-gallery-item.is-square {
