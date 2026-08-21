@@ -528,6 +528,82 @@ input[type='checkbox'] {
 	text-align: center;
 }
 
+
+/**********************/
+/*     Grid Gallery   */
+/**********************/
+.grid-gallery {
+	--grid-gap: 0.75rem;
+	--grid-cell: 300px;
+	padding: var(--grid-gap);
+	overflow-x: auto;
+	background-color: #ffffff;
+}
+
+.grid-gallery-container {
+	display: grid;
+	grid-auto-flow: dense;
+	grid-auto-rows: var(--grid-cell);
+	grid-template-columns: repeat(auto-fit, var(--grid-cell));
+	gap: var(--grid-gap);
+	width: 100%;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+.grid-gallery-item {
+	position: relative;
+	overflow: hidden;
+	background-color: #f7f9fb;
+}
+
+.grid-gallery-item.is-landscape {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.grid-gallery-item.is-portrait {
+	grid-column: span 1;
+	grid-row: span 4;
+}
+
+.grid-gallery-item.is-square {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+.grid-gallery-item img {
+	display: block;
+	width: auto;
+	height: auto;
+	max-width: none;
+	max-height: none;
+}
+
+@media (max-width: 767px) {
+	.grid-gallery-container {
+		grid-template-columns: 600px;
+		width: 600px;
+	}
+
+	.grid-gallery-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.grid-gallery-item.is-landscape {
+		grid-column: span 1;
+		grid-row: span 1;
+	}
+
+	.grid-gallery-item.is-portrait,
+	.grid-gallery-item.is-square {
+		grid-column: span 1;
+		grid-row: span 2;
+	}
+}
+
 .header .text-container {
 	display: flex;
 	justify-content: center;
