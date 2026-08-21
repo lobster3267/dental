@@ -4,6 +4,32 @@
 (function($) {
     "use strict"; 
 	
+	 /* Populate the gallery from the grid folder in a new order on each load. */
+    var gridImages = [];
+    for (var gridIndex = 1; gridIndex <= 59; gridIndex++) {
+        var paddedIndex = String(gridIndex).padStart(3, '0');
+        var imageType = gridIndex <= 28 ? '2x1' : (gridIndex <= 38 ? '1x2' : '1x1');
+        gridImages.push({
+            path: 'grid/' + paddedIndex + '_image_' + imageType + '.jpg',
+            type: imageType
+        });
+    }
+
+    gridImages.sort(function() {
+        return Math.random() - 0.5;
+    });
+
+    $.each(gridImages, function(index, image) {
+        var className = image.type === '2x1' ? 'is-landscape' : (image.type === '1x2' ? 'is-portrait' : 'is-square');
+        $('<div>', { class: 'grid-gallery-item ' + className })
+            .append($('<img>', {
+                src: image.path,
+                alt: 'Selected work ' + (index + 1),
+                loading: index < 12 ? 'eager' : 'lazy'
+            }))
+            .appendTo('#gridGallery');
+    });
+	
     /* Navbar Scripts */
     // jQuery to collapse the navbar on scroll
     $(window).on('scroll load', function() {
